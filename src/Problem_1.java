@@ -96,6 +96,7 @@ public class Problem_1 {
 
     public static class Bracer {
         public List<Double> bracify(String input) {
+
             List<Double> result = new ArrayList<>();
             if (input == null || input.length() == 0) {
                 return result;
@@ -146,9 +147,10 @@ public class Problem_1 {
             return result;
         }
 
-        private boolean isOperator(char operator) {
-            return (operator == '+') || (operator == '-') || (operator == '*') || (operator == '/');
-        }
+    }
+
+    private static boolean isOperator(char operator) {
+        return (operator == '+') || (operator == '-') || (operator == '*') || (operator == '/');
     }
 
     public static void main(String[] args) {
@@ -161,6 +163,6 @@ public class Problem_1 {
         System.out.println(bestFit.fit("222", 11));
         System.out.println(bestFit.fit("321", 8));
 
-        System.out.println(bestFit.fitBraces("321", 9));
+        System.out.println(bestFit.fitBraces("45323", 9));
     }
 }
